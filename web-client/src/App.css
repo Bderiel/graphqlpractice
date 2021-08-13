@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.VictoryContainer{
+  height: 50% !important;
+}
+
+.toggle-button{
+  color: white;
+  cursor: pointer;
+}
+
+.container__toggle {
+ display: flex;
+ justify-content: center;
+ gap: 1em;
+}
+
+.off{
+  background: darkgray !important;
+}
+
+table{
+  font-size: 1.5em;
+}

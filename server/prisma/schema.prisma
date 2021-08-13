@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator typegraphql {
+  provider = "typegraphql-prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model LoanStats {
+  id        Int      @id @default(autoincrement())
+  state     String?
+  fico_low  Int?
+  grade     String?
+  fico_high Int?
+  int_rate  Decimal? @db.Decimal
+  issue_d   String?
+  loan_amnt Int?
+}
