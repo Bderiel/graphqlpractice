@@ -4,7 +4,6 @@ import { ApolloServer } from 'apollo-server';
 import { buildSchemaSync } from 'type-graphql'
 import { resolvers } from '@generated/type-graphql';
 import prisma from './libs/prisma';
-import { seedDB } from './seed';
 
 const schema = buildSchemaSync({
     resolvers,
@@ -23,5 +22,3 @@ const server = new ApolloServer({
 server.listen({
     port: 4000,
 });
-
-// seedDB()
